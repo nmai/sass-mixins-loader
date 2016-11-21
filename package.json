@@ -1,6 +1,6 @@
 {
   "name": "sass-mixins-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SASS resources loader for Webpack. PS version.",
   "main": "lib/loader.js",
   "scripts": {
