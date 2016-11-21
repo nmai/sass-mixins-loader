@@ -5,14 +5,10 @@
   "main": "lib/loader.js",
   "scripts": {
     "start": "npm run lint && npm run clean && npm run dev",
-    "dev": "node scripts/dev",
-    "build": "node scripts/build",
-    "lint": "node scripts/lint",
-    "clean": "node scripts/clean",
-    "postinstall": "npm run build",
-    "prerelease": "npm run lint && npm run clean && npm run build",
-    "preversion": "npm run prerelease",
-    "prepublish": "npm run prerelease",
+    "dev": "scripts/dev",
+    "build": "babel --out-dir lib src",
+    "lint": "scripts/lint",
+    "clean": "scripts/clean",
     "release:patch": "scripts/release patch",
     "release:minor": "scripts/release minor",
     "release:major": "scripts/release major"
