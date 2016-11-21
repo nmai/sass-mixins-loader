@@ -7,7 +7,7 @@ import async from 'async';
 import processResources from './utils/processResources';
 import logger from './utils/logger';
 import parseResources from './utils/parseResources';
-import parseQuery from 'loader-utils'
+const parseQuery = require('loader-utils').parseQuery;
 
 module.exports = function(source) {
   const webpack = this;
