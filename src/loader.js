@@ -17,7 +17,7 @@ module.exports = function(source) {
   const callback = webpack.async();
 
   global.__DEBUG__ = (
-    process.env.DEBUG === 'sass-resources-loader' || process.env.DEBUG === '*'
+    process.env.DEBUG === 'sass-mixins-loader' || process.env.DEBUG === '*'
   );
 
   logger.debug(`Hey, we're in DEBUG mode! Yabba dabba doo!`);
