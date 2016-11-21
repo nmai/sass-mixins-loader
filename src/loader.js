@@ -7,6 +7,7 @@ import async from 'async';
 import processResources from './utils/processResources';
 import logger from './utils/logger';
 import parseResources from './utils/parseResources';
+import parseQuery from 'loader-utils'
 
 module.exports = function(source) {
   const webpack = this;
@@ -21,7 +22,8 @@ module.exports = function(source) {
 
   logger.debug(`Hey, we're in DEBUG mode! Yabba dabba doo!`);
 
-  const resourcesLocation = parseResources(webpack.options.sassResources);
+  const query = parseQuery(this.query)
+  const resourcesLocation = parseResources(query.sassResources);
   const moduleContext = webpack.context;
   const webpackConfigContext = webpack.options.context;
 

@@ -36,7 +36,8 @@
   "dependencies": {
     "async": "^1.5.2",
     "chalk": "^1.1.1",
-    "glob": "^7.0.5"
+    "glob": "^7.0.5",
+    "loader-utils": "^0.2.16"
   },
   "devDependencies": {
     "babel": "^6.1.18",
