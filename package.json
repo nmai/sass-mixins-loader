@@ -1,17 +1,20 @@
 {
   "name": "sass-mixins-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SASS resources loader for Webpack. PS version.",
   "main": "lib/loader.js",
   "scripts": {
     "start": "npm run lint && npm run clean && npm run dev",
-    "dev": "scripts/dev",
-    "build": "babel --out-dir lib src",
-    "lint": "scripts/lint",
-    "clean": "scripts/clean",
-    "release:patch": "scripts/release patch",
-    "release:minor": "scripts/release minor",
-    "release:major": "scripts/release major"
+    "dev": "./scripts/dev",
+    "build": "./scripts/build",
+    "lint": "./scripts/lint",
+    "clean": "./scripts/clean",
+    "prerelease": "npm run lint && npm run clean && npm run build",
+    "preversion": "npm run prerelease",
+    "prepublish": "npm run prerelease",
+    "release:patch": "./scripts/release patch",
+    "release:minor": "./scripts/release minor",
+    "release:major": "./scripts/release major"
   },
   "authors": [
     "Justin Gordon <justin.gordon@gmail.com> (https://github.com/justin808)",
