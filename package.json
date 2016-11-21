@@ -9,6 +9,7 @@
     "build": "scripts/build",
     "lint": "scripts/lint",
     "clean": "scripts/clean",
+    "postinstall": "npm run build",
     "prerelease": "npm run lint && npm run clean && npm run build",
     "preversion": "npm run prerelease",
     "prepublish": "npm run prerelease",
